@@ -1,5 +1,6 @@
 #ifndef PID_H
 #define PID_H
+#include <vector>
 
 class PID {
  public:
@@ -23,6 +24,8 @@ class PID {
    * Update the PID error variables given cross track error.
    * @param cte The current cross track error
    */
+  void SetParam(std::vector<double> param);
+  
   void UpdateError(double cte);
 
   /**
